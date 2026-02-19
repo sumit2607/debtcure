@@ -203,7 +203,7 @@ function initAnimations() {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.service-card, .feature-item, .section-title, .hero-text, .rights-content, .testimonial-card, .marquee-container');
+    const animatedElements = document.querySelectorAll('.service-card, .feature-item, .section-title, .hero-text, .rights-content, .testimonial-card, .marquee-container, .process-step, .process-timeline');
     animatedElements.forEach(el => {
         el.classList.add('fade-in-up');
         observer.observe(el);
