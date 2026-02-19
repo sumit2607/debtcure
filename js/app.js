@@ -104,25 +104,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Form Submission Placeholder
+    // Form Submission Logic: Redirect to WhatsApp
     const form = document.getElementById('lead-form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        // Extract form data
+        const name = form.querySelector('input[type="text"]').value;
+        const phone = form.querySelector('input[type="tel"]').value;
+        const issue = form.querySelector('textarea').value;
         const btn = form.querySelector('button');
         const originalText = btn.innerText;
 
-        btn.innerText = 'Submitting...';
+        btn.innerText = 'Redirecting to WhatsApp...';
         btn.disabled = true;
 
-        // Simulate API call
+        // Construct WhatsApp Message
+        const message = `Hello DebtCure, I need legal advice.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Issue:* ${issue}`;
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/919076573857?text=${encodedMessage}`;
+
+        // Redirect after a short delay
         setTimeout(() => {
-            alert('Thank you! Your request has been received. Our legal expert will call you shortly.');
+            window.open(whatsappUrl, '_blank');
             modal.style.display = 'none';
             btn.innerText = originalText;
             btn.disabled = false;
             form.reset();
             document.body.style.overflow = 'auto';
-        }, 1500);
+        }, 800);
     });
 
     // Intersection Observer for Animations
