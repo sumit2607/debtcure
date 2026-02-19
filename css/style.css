@@ -1605,6 +1605,38 @@ img {
     }
 }
 
+/* Testimonial Photo Styles */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-info strong {
+    display: block;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.author-info span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
 .mb-20 {
     margin-bottom: 20px;
 }
