@@ -177,23 +177,62 @@ img {
     height: 80px;
 }
 
-.logo-text {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: scale(1.1);
+}
+
+.logo-text-wrapper {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+}
+
+.logo-part-1 {
     color: var(--primary-color);
-    letter-spacing: -0.02em;
+    /* Navy */
+}
+
+.logo-part-2 {
+    color: var(--accent-color);
+    /* Green */
+}
+
+.logo-part-3 {
+    color: var(--primary-color);
+    font-weight: 600;
+    /* Slightly lighter for 'In' */
+    font-size: 1.8rem;
 }
 
 .nav-list {
     display: flex;
-    gap: 32px;
+    gap: 40px;
+    align-items: center;
 }
 
 .nav-list a {
-    font-weight: 500;
-    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-primary);
     position: relative;
+    transition: color 0.3s ease;
 }
 
 .nav-list a:hover {
@@ -1200,4 +1239,134 @@ img {
         height: 300px;
         /* Smaller height for mobile */
     }
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 8px;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: var(--text-primary);
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f1f1f1;
+    font-weight: 500;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Add a separate class for the dropdown header if needed */
+.dropdown-header {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #f1f1f1;
+    background-color: #fafafa;
+}
+
+/* Service Card Links & Hover Effects */
+.service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.service-card-link .service-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 20px;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card-link:hover .learn-more {
+    transform: translateX(5px);
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--white);
+}
+
+/* Floating WhatsApp Button Improvements */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* Modal Z-index fix */
+.modal {
+    z-index: 1001;
 }

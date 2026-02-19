@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | debtcureIn</title>
+    <title>Privacy Policy | DebtCure</title>
     <meta name="description"
-        content="Privacy Policy for debtcureIn. Learn how we protect your personal information and data.">
+        content="Privacy Policy for DebtCure. Learn how we protect your personal information and data.">
     <link rel="stylesheet" href="css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
@@ -60,17 +60,43 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="main-header">
         <div class="container header-container">
-            <a href="index.html" class="logo">debtcure<span>In</span></a>
+            <a href="index.html" class="logo" aria-label="DebtCure Home">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="var(--primary-color)"
+                        stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9 12L11 14L15 10" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <div class="logo-text-wrapper">
+                    <span class="logo-part-1">Debt</span><span class="logo-part-2">Cure</span>
+                </div>
+            </a>
             <nav class="nav">
-                <a href="index.html#home" class="nav-link">Home</a>
-                <a href="index.html#services" class="nav-link">Services</a>
-                <a href="index.html#rights" class="nav-link">Your Rights</a>
-                <a href="index.html#stories" class="nav-link">Stories</a>
-                <a href="index.html#contact" class="btn btn-primary small">Get Legal Help</a>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="services.html" class="dropbtn">Services ▾</a>
+                        <div class="dropdown-content">
+                            <a href="personal-loan-settlement.html">Personal Loan Settlement</a>
+                            <a href="credit-card-loan-settlement.html">Credit Card Loan Settlement</a>
+                            <a href="anti-harassment-service.html">Anti-Harassment Service</a>
+                            <a href="credit-score-builder.html">Credit Score Builder</a>
+                            <a href="education-loan-settlement.html">Education Loan Settlement</a>
+                            <a href="additional-services.html">Additional Services</a>
+                            <a href="loan-segregation.html">Loan Segregation</a>
+                        </div>
+                    </li>
+                    <li><a href="your-rights.html">Your Rights</a></li>
+                    <li><a href="steps.html">Steps</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                </ul>
             </nav>
-            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-primary small">Get Legal Help</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -79,17 +105,23 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header"
+        style="background: radial-gradient(circle at 50% 50%, #1a2e47 0%, var(--primary-color) 100%); padding: 120px 0 60px; color: white; text-align: center;">
         <div class="container">
-            <h1 class="hero-title">Privacy Policy</h1>
-            <p>Last Updated: February 19, 2026</p>
+            <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom: 20px; font-size: 0.9rem;">
+                <a href="index.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">Home</a>
+                <span style="margin: 0 10px; color: rgba(255,255,255,0.5);">/</span>
+                <span style="color: white;">Privacy Policy</span>
+            </nav>
+            <h1 class="hero-title" style="font-size: 2.5rem;">Privacy Policy</h1>
+            <p class="hero-subtitle">Last Updated: February 19, 2026</p>
         </div>
     </section>
 
     <!-- Policy Content -->
-    <section class="policy-content">
+    <section class="policy-content" style="padding: 60px 0; max-width: 900px; margin: 0 auto;">
         <div class="container">
-            <p>At <strong>debtcureIn</strong>, we are committed to maintaining the privacy, confidentiality, and
+            <p>At <strong>DebtCure</strong>, we are committed to maintaining the privacy, confidentiality, and
                 security of your personal information. As a professional legal services provider, we understand the
                 sensitive nature of the data you may share with us. This Privacy Policy outlines how we collect, use,
                 store, and protect your information in accordance with applicable Indian data protection laws.</p>
@@ -97,7 +129,8 @@
             <h2>1. Introduction</h2>
             <p>This Privacy Policy applies to all users who access our website
                 <strong>https://debtcurein.online</strong> or engage with us to avail legal services. By using our
-                services or website, you agree to the practices described in this Policy.</p>
+                services or website, you agree to the practices described in this Policy.
+            </p>
 
             <h2>2. Information We Collect</h2>
             <p>We collect personal information only when it is necessary to provide our legal services or to comply with
@@ -165,7 +198,7 @@
                 <li>Request deletion of your data (unless we are legally required to retain it)</li>
                 <li>Withdraw consent (where processing is based on consent)</li>
             </ul>
-            <p>You may write to us at <strong>support@debtcurein.online</strong> to exercise your rights.</p>
+            <p>You may write to us at <strong>debtcureindia@gmail.com</strong> to exercise your rights.</p>
 
             <h2>9. Cookies</h2>
             <p>We use essential cookies to ensure the proper functioning of our website. These cookies do not collect
@@ -193,8 +226,8 @@
             <h2>13. Contact Us</h2>
             <p>If you have any questions or concerns regarding this Privacy Policy or how your data is handled, please
                 contact:</p>
-            <p><strong>debtcureIn</strong><br>
-                📧 Email: support@debtcurein.online<br>
+            <p><strong>DebtCure</strong><br>
+                📧 Email: debtcureindia@gmail.com<br>
                 🌐 Website: <a href="https://debtcurein.online">https://debtcurein.online</a></p>
         </div>
     </section>
@@ -202,23 +235,58 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2026 debtcureIn. All rights reserved.</p>
-                <div class="disclaimer">
-                    <p>Disclaimer: The information provided on this website is for general informational purposes only
-                        and does not constitute legal advice. No lawyer-client relationship is formed until a formal
-                        agreement is signed.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">DebtCure</h3>
+                    <p>Empowering you with legal protection against unfair loan recovery practices.</p>
                 </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="your-rights.html">Know Your Rights</a></li>
+                        <li><a href="steps.html">Steps</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>📧 debtcureindia@gmail.com</p>
+                    <p>📍 Patiala House Court & Saket Court, New Delhi</p>
+                    <p>📞 +91-XXXXXXXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DebtCure. All Rights Reserved.</p>
+                <p class="disclaimer">Disclaimer: This platform provides consultation and legal support. We are not a
+                    bank or NBFC.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Lead Capture Modal -->
+    <div id="lead-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Get Your Free Legal Advice</h2>
+            <p>Fill out the form below and our expert will call you shortly.</p>
+            <form id="lead-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <textarea placeholder="Briefly describe your issue" rows="3"></textarea>
+                <button type="submit" class="btn btn-primary full-width">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/91XXXXXXXXXX" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon" fill="white" width="32" height="32">
             <path
-                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.85.895 2.802.895 3.193 0 5.772-2.585 5.773-5.766 0-3.18-2.59-5.782-5.779-5.782zm0 10.457c-.838 0-1.666-.263-2.39-7.1l-1.636 4.3.428-1.57c-.676-.8-1.077-1.844-1.078-3.099 0-2.678 2.197-4.875 4.88-4.875 2.682 0 4.88 2.197 4.88 4.875 0 2.668-2.193 4.869-4.868 4.869z"
-                fill="currentColor" />
+                d="M16.75 3.5C9.55 3.5 3.75 9.3 3.75 16.5c0 2.6.75 5.05 2.1 7.2L4.5 29.5l6-1.6c2 .95 4.25 1.5 6.25 1.5 7.2 0 13-5.8 13-13s-5.8-13-13-13zm0 23.5c-1.95 0-3.85-.5-5.5-1.45l-.4-.2-4.1 1.1 1.1-3.95-.25-.4C6.55 20.45 6 18.55 6 16.5c0-5.95 4.8-10.75 10.75-10.75 5.95 0 10.75 4.8 10.75 10.75S22.7 27 16.75 27zM22.5 19.95c-.3-.15-1.75-.85-2-1-.25-.1-.45-.1-.65.15-.2.25-.75 1-.95 1.25-.15.15-.35.2-.65.05-1.75-.9-3-2.3-4-4.15-.15-.25 0-.4.15-.55l.45-.5c.15-.15.2-.25.3-.45.1-.2.05-.35-.05-.5-.05-.15-.65-1.55-.9-2.15-.25-.55-.5-.5-.65-.5h-.55c-.2 0-.5.1-.8.4-.3.3-1.15 1.1-1.15 2.7 0 1.6 1.15 3.15 1.3 3.35.15.2 2.25 3.45 5.45 4.85 2 .85 2.75.95 3.7.85 1.05-.1 2.35-.95 2.7-1.9.3-1 .3-1.8.2-1.95-.15-.2-.35-.3-.65-.45z"
+                fill="#FFF" />
         </svg>
     </a>
 
