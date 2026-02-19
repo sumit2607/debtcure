@@ -1559,6 +1559,52 @@ img {
     flex-grow: 1;
 }
 
+/* Success Stories Marquee */
+.marquee-container {
+    overflow: hidden;
+    background: var(--light-bg);
+    padding: 30px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 60s linear infinite;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px 25px;
+    margin: 0 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.marquee-item span {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .mb-20 {
     margin-bottom: 20px;
 }
