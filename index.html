@@ -360,369 +360,427 @@
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Section: Your Debt is Civil, Not Criminal (Settlement Calculator) -->
+        <section class="section calculator-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Your Debt is Civil, Not Criminal</h2>
+                    <p class="section-desc">Calculate your potential settlement amount based on current legal
+                        precedents. We typically aim for a <strong>30% settlement</strong>.</p>
+                </div>
 
-    <!-- Section 4: Why Choose DebtCure -->
-    <section id="why-us" class="section why-us-section bg-light">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">The DebtCure Advantage</h2>
-                <p class="section-desc">Why thousands of Indians trust us with their financial future.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">👨‍⚖️</div>
-                    <h4>Legal Muscle</h4>
-                    <p>Our team includes high court advocates who understand the fine print of banking law.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔍</div>
-                    <h4>Unbiased Consultation</h4>
-                    <p>We represent YOU, not the bank. Our goal is the maximum benefit for our clients.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <h4>Outcome Oriented</h4>
-                    <p>We don't just send notices; we ensure the harassment stays stopped and the debt is settled.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🇮🇳</div>
-                    <h4>Digital Ease</h4>
-                    <p>Upload your documents, track your progress, and get help from across India digitally.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="calc-container">
+                    <div class="calc-grid">
+                        <div class="calc-inputs">
+                            <div class="calc-input-group">
+                                <label class="calc-label">Total Outstanding Loan Amount</label>
+                                <input type="range" min="50000" max="5000000" step="10000" value="500000"
+                                    class="calc-slider" id="loan-amount-slider">
+                                <div class="amount-display">₹ <span id="current-loan-display">5,00,000</span></div>
+                            </div>
+                            <p class="text-secondary small">Slide to select your total debt across all banks/apps.</p>
+                        </div>
 
-    <!-- Section 5: Client Relief Stories -->
-    <section id="testimonials" class="section testimonials-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Real Stories, Real Relief</h2>
-                <p class="section-desc">Hear from people who regained their freedom through DebtCure.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon">“</div>
-                    <p class="testimonial-text">I was getting 20 calls daily. It was a nightmare. After contacting
-                        DebtCure, the harassment stopped within days. I can finally sleep peacefully.</p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&fit=crop"
-                            alt="Ramesh K." class="testimonial-avatar">
-                        <div class="author-info">
-                            <strong>Ramesh K.</strong>
-                            <span>Business Owner, Mumbai</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">“</div>
-                    <p class="testimonial-text">Technically, I lost my job and couldn't pay credit card dues. DebtCure
-                        negotiated the settlement from 5 Lakhs to 1.5 Lakhs. Life saver!</p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&h=200&fit=crop"
-                            alt="Sneha P." class="testimonial-avatar">
-                        <div class="author-info">
-                            <strong>Sneha P.</strong>
-                            <span>IT Professional, Bangalore</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">“</div>
-                    <p class="testimonial-text">My family was being threatened by an app-based loan provider. The legal
-                        notice from DebtCure stopped them immediately. 100% recommended.</p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&fit=crop"
-                            alt="Amit S." class="testimonial-avatar">
-                        <div class="author-info">
-                            <strong>Amit S.</strong>
-                            <span>Teacher, Delhi</span>
+                        <div class="calc-results">
+                            <div class="result-card">
+                                <p>Potential Settlement Amount</p>
+                                <div class="result-amount">₹ <span id="settlement-amount-display">1,50,000</span></div>
+                                <div class="savings-badge">Estimated Savings: ₹ <span
+                                        id="savings-display">3,50,000</span></div>
+                                <p class="small mt-20" style="opacity: 0.8;">*Basis professional legal negotiation.
+                                    Results may vary by bank.</p>
+                            </div>
+                            <button class="btn btn-secondary full-width mt-20" id="calc-cta-btn">Get This Settlement
+                                Now</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section 6: Process -->
-    <section id="process" class="section process-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Our Roadmap to Your Freedom</h2>
-                <p class="section-desc">Our proven 3-step legal process to resolve your debt issues.</p>
+        <!-- Section 4: Why Choose DebtCure -->
+        <section id="why-us" class="section why-us-section bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">The DebtCure Advantage</h2>
+                    <p class="section-desc">Why thousands of Indians trust us with their financial future.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">👨‍⚖️</div>
+                        <h4>Legal Muscle</h4>
+                        <p>Our team includes high court advocates who understand the fine print of banking law.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔍</div>
+                        <h4>Unbiased Consultation</h4>
+                        <p>We represent YOU, not the bank. Our goal is the maximum benefit for our clients.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💰</div>
+                        <h4>Outcome Oriented</h4>
+                        <p>We don't just send notices; we ensure the harassment stays stopped and the debt is settled.
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🇮🇳</div>
+                        <h4>Digital Ease</h4>
+                        <p>Upload your documents, track your progress, and get help from across India digitally.</p>
+                    </div>
+                </div>
             </div>
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Case Registration</h3>
-                    <p>Submit your loan details and tell us about the harassment you're facing. Everything is kept 100%
-                        confidential.</p>
+        </section>
+
+        <!-- Section 5: Client Relief Stories -->
+        <section id="testimonials" class="section testimonials-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Real Stories, Real Relief</h2>
+                    <p class="section-desc">Hear from people who regained their freedom through DebtCure.</p>
                 </div>
-                <div class="process-connector"></div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Legal Intervention</h3>
-                    <p>Our lawyers review the violations by the bank/NBFC and issue a formal legal notice to cease and
-                        desist all illegal activities.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">I was getting 20 calls daily. It was a nightmare. After contacting
+                            DebtCure, the harassment stopped within days. I can finally sleep peacefully.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=200&h=200&fit=crop"
+                                alt="Ramesh K." class="testimonial-avatar">
+                            <div class="author-info">
+                                <strong>Ramesh K.</strong>
+                                <span>Business Owner, Mumbai</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">Technically, I lost my job and couldn't pay credit card dues.
+                            DebtCure
+                            negotiated the settlement from 5 Lakhs to 1.5 Lakhs. Life saver!</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&fit=crop"
+                                alt="Sneha P." class="testimonial-avatar">
+                            <div class="author-info">
+                                <strong>Sneha P.</strong>
+                                <span>IT Professional, Bangalore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">My family was being threatened by an app-based loan provider. The
+                            legal
+                            notice from DebtCure stopped them immediately. 100% recommended.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?q=80&w=200&h=200&fit=crop"
+                                alt="Amit S." class="testimonial-avatar">
+                            <div class="author-info">
+                                <strong>Amit S.</strong>
+                                <span>Teacher, Delhi</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="process-connector"></div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Final Resolution</h3>
-                    <p>We handle the negotiations for settlement, verify the closure letters, and help you get an
-                        official 'No Dues Certificate'.</p>
+            </div>
+        </section>
+
+        <!-- Section 6: Process -->
+        <section id="process" class="section process-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Our Roadmap to Your Freedom</h2>
+                    <p class="section-desc">Our proven 3-step legal process to resolve your debt issues.</p>
                 </div>
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Case Registration</h3>
+                        <p>Submit your loan details and tell us about the harassment you're facing. Everything is kept
+                            100%
+                            confidential.</p>
+                    </div>
+                    <div class="process-connector"></div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Legal Intervention</h3>
+                        <p>Our lawyers review the violations by the bank/NBFC and issue a formal legal notice to cease
+                            and
+                            desist all illegal activities.</p>
+                    </div>
+                    <div class="process-connector"></div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Final Resolution</h3>
+                        <p>We handle the negotiations for settlement, verify the closure letters, and help you get an
+                            official 'No Dues Certificate'.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories Marquee -->
+        <section class="section success-marquee-section no-padding-bottom">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Success Stories: From Debt Stress to Freedom</h2>
+                    <p class="section-desc">Over 5,000+ Indians have already reclaimed their peace of mind.</p>
+                </div>
+            </div>
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <!-- 50+ Items duplicated for infinite loop -->
+                    <div class="marquee-item"><span>✅</span> Rahul (Delhi): ₹8L Debt Settle to ₹1.5L</div>
+                    <div class="marquee-item"><span>✅</span> Priya (Mumbai): Harassment Stopped in 24h</div>
+                    <div class="marquee-item"><span>✅</span> Vikram (Jaipur): SARFAESI Notice Won</div>
+                    <div class="marquee-item"><span>✅</span> Sneha (Pune): 70% Credit Card Waiver</div>
+                    <div class="marquee-item"><span>✅</span> Amit (Delhi): Stop 50+ Daily Calls</div>
+                    <div class="marquee-item"><span>✅</span> Ritu (Lucknow): Personal Loan 60% Off</div>
+                    <div class="marquee-item"><span>✅</span> Karan (Surat): Business Debt Resolved</div>
+                    <div class="marquee-item"><span>✅</span> Neha (Indore): App Loan Harassment End</div>
+                    <div class="marquee-item"><span>✅</span> Sunil (Patna): Credit Score Rebuilt</div>
+                    <div class="marquee-item"><span>✅</span> Anita (Chennai): Legal Shield Activated</div>
+                    <div class="marquee-item"><span>✅</span> Rohit (Bhopal): Bank Case Won in Court</div>
+                    <div class="marquee-item"><span>✅</span> Pooja (Agra): Education Loan Restructure</div>
+                    <div class="marquee-item"><span>✅</span> Vijay (Ranchi): Joint Liability Settle</div>
+                    <div class="marquee-item"><span>✅</span> Simran (Amritsar): 65% Waiver on CC</div>
+                    <div class="marquee-item"><span>✅</span> Abhay (Nagpur): Recovery Agents Banned</div>
+                    <div class="marquee-item"><span>✅</span> Kavita (Madurai): FIR Against Agents</div>
+                    <div class="marquee-item"><span>✅</span> Rohit (Bhopal): Bank Case Won in Court</div>
+                    <div class="marquee-item"><span>✅</span> Jatin (Ahmedabad): BOB Recovery Stop</div>
+                    <div class="marquee-item"><span>✅</span> Kiran (Hyderabad): IDFC First Waiver</div>
+                    <div class="marquee-item"><span>✅</span> Ajay (Thane): IndusInd Loan Close</div>
+                    <div class="marquee-item"><span>✅</span> Lata (Gwalior): YES Bank Settle (65%)</div>
+                    <div class="marquee-item"><span>✅</span> Arun (Meerut): SCB Debt Reduction</div>
+                    <div class="marquee-item"><span>✅</span> Meena (Varanasi): Canara Bank Settle</div>
+                    <div class="marquee-item"><span>✅</span> Sanjay (Kolkata): Bandhan Bank Relief</div>
+                    <div class="marquee-item"><span>✅</span> Tanvi (Jodhpur): Shriram Finance End</div>
+                    <div class="marquee-item"><span>✅</span> Hari (Udaipur): Bajaj Finance Settle</div>
+                    <div class="marquee-item"><span>✅</span> Jyoti (Salem): L&T Housing Settle</div>
+                    <div class="marquee-item"><span>✅</span> Om (Dehradun): Cholamandalam Win</div>
+                    <div class="marquee-item"><span>✅</span> Tara (Shimla): Muthoot Loan Closed</div>
+                    <div class="marquee-item"><span>✅</span> Dev (Jammu): Manappuram Gold Relief</div>
+                    <div class="marquee-item"><span>✅</span> Anu (Solapur): Home Credit Settle</div>
+                    <div class="marquee-item"><span>✅</span> Bob (Hubli): Fullerton Legal Win</div>
+                    <div class="marquee-item"><span>✅</span> Sia (Belgaum): Tata Capital Waivers</div>
+                    <div class="marquee-item"><span>✅</span> Raj (Alwar): Aditya Birla Settle</div>
+                    <div class="marquee-item"><span>✅</span> Uma (Ajmer): Piramal Finance End</div>
+                    <div class="marquee-item"><span>✅</span> Ved (Kota): Hero Fincorp Relief</div>
+                    <div class="marquee-item"><span>✅</span> Zia (Akola): Poonawalla Debt Settle</div>
+                    <div class="marquee-item"><span>✅</span> Yash (Jalgaon): InCred Harassment Stop</div>
+                    <div class="marquee-item"><span>✅</span> Shital (Dhule): Navi App Loan Won</div>
+                    <div class="marquee-item"><span>✅</span> Nitin (Sangli): Dhani Debt Resolved</div>
+                    <div class="marquee-item"><span>✅</span> Komal (Satara): KreditBee Relief</div>
+                    <div class="marquee-item"><span>✅</span> Akash (Malegaon): EarlySalary Settle</div>
+                    <div class="marquee-item"><span>✅</span> Tanuja (Sikar): MoneyTap Waiver Won</div>
+                    <div class="marquee-item"><span>✅</span> Brijesh (Etawah): PaySense Legal Win</div>
+                    <div class="marquee-item"><span>✅</span> Dolly (Rewa): Kissht Harassment End</div>
+                    <div class="marquee-item"><span>✅</span> Prem (Bundi): CASHe Debt Managed</div>
+                    <!-- Duplicate -->
+                    <div class="marquee-item"><span>✅</span> Rahul (Delhi): ₹8L Debt Settle to ₹1.5L</div>
+                    <div class="marquee-item"><span>✅</span> Priya (Mumbai): Harassment Stopped in 24h</div>
+                    <div class="marquee-item"><span>✅</span> Vikram (Jaipur): SARFAESI Notice Won</div>
+                    <div class="marquee-item"><span>✅</span> Sneha (Pune): 70% Credit Card Waiver</div>
+                    <div class="marquee-item"><span>✅</span> Amit (Delhi): Stop 50+ Daily Calls</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Common Legal Queries (SEO FAQ)</h2>
+                    <p class="section-desc">Answering your doubts about debt, RBI guidelines, and legal rights.</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">Can I be arrested for not paying a personal loan? <span
+                                class="toggle-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>No. Defaulting on a loan is a civil case, not a criminal one. You cannot be arrested just
+                                for
+                                default. However, cheque bounce cases (Section 138) or hiding assets can lead to
+                                criminal
+                                proceedings, which is why professional legal representation is vital.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What are the RBI guidelines for recovery agents in 2024? <span
+                                class="toggle-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>RBI guidelines strictly forbid calling before 8 AM or after 7 PM, using abusive language,
+                                and
+                                contacting friends/family. Agents must also carry identification and an authorization
+                                letter
+                                from the bank.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Is loan settlement legal in India? <span
+                                class="toggle-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Yes, loan settlement is a perfectly legal negotiation process between a borrower and a
+                                lender
+                                (Bank/NBFC) under the Indian Contract Act. It allows the borrower to close the debt by
+                                paying a mutually agreed lump sum amount.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How can I stop harassment from Chinese loan apps? <span
+                                class="toggle-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>You must file a cyber-crime complaint and issue a formal legal notice. DebtCure
+                                specializes
+                                in handling aggressive recovery tactics from app-based lenders, providing you with a
+                                legal
+                                shield and privacy protection.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can recovery agents visit my neighbors/workplace? <span
+                                class="toggle-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>This is a serious violation of your Right to Privacy. We can help you file a formal
+                                complaint
+                                with the Banking Ombudsman and seek damages for defamation and mental agony caused by
+                                such
+                                illegal visits.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What is Section 138 (Cheque Bounce) in debt cases? <span
+                                class="toggle-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Section 138 of the Negotiable Instruments Act deals with dishonored cheques. It is a
+                                criminal
+                                offense if a cheque is bounced due to insufficient funds. DebtCure provides legal
+                                defense to
+                                help you handle these notices and settle out of court.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How does settlement affect my CIBIL score? <span
+                                class="toggle-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>A settlement shows as 'Settled' on your report, which temporarily lowers your score.
+                                However,
+                                once you are debt-free, we guide you through our Credit Score Builder program to restore
+                                it
+                                within 6-12 months through legal and financial strategies.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can I travel abroad if I have a loan default? <span
+                                class="toggle-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Yes, in 99% of cases, you can travel abroad. A loan default is a civil matter and does
+                                not
+                                restrict your movement unless there is a specific court order or if you are declared a
+                                'Willful Defaulter' by an investigative agency.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Are WhatsApp notices from recovery agents legal? <span
+                                class="toggle-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Most WhatsApp notices sent by agents are fake or unofficial templates meant to scare you.
+                                A
+                                real court summons is served physically or through registered post. We verify all such
+                                digital notices to ensure you are not being duped.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How to file a complaint in Banking Ombudsman? <span
+                                class="toggle-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>You can file it through the CMS portal of RBI. However, you must first have a rejected
+                                complaint from the bank. DebtCure lawyers handle the entire drafting and filing process
+                                to
+                                ensure your voice is heard by the regulators.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Strong CTA -->
+        <section id="contact" class="section cta-section bg-primary text-white">
+            <div class="container cta-content">
+                <h2 class="cta-title">Don’t Let Harassment Ruin Your Health.</h2>
+                <p class="cta-subtitle">Our legal team is standing by to take charge of your situation today.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-secondary large" id="consultation-btn">Start My Legal Recovery</button>
+                    <a href="tel:+919076573857" class="btn btn-outline-white large">Call Support Now</a>
+                    <a href="https://wa.me/919076573857" class="btn btn-whatsapp large">WhatsApp Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3 class="footer-logo">DebtCure</h3>
+                        <p>Empowering you with legal protection against unfair loan recovery practices.</p>
+                        <div class="social-icons">
+                            <!-- Social Icons Placeholder -->
+                            <span>📘</span> <span>🐦</span> <span>📷</span>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="your-rights.html">Know Your Rights</a></li>
+                            <li><a href="steps.html">Steps</a></li>
+                            <li><a href="stories.html">Stories</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="refund-policy.html">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact Us</h4>
+                        <p>📧 debtcureindia@gmail.com</p>
+                        <p>📍 Patiala House Court & Saket Court, New Delhi</p>
+                        <p>📞 +91-9076573857</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 DebtCure. All Rights Reserved.</p>
+                    <p class="disclaimer">Disclaimer: This platform provides consultation and legal support. We are not
+                        a
+                        bank or NBFC.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Lead Capture Modal -->
+        <div id="lead-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Get Your Free Legal Advice</h2>
+                <p>Fill out the form below and our expert will call you shortly.</p>
+                <form id="lead-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <textarea placeholder="Briefly describe your issue" rows="3"></textarea>
+                    <button type="submit" class="btn btn-primary full-width">Submit Request</button>
+                </form>
             </div>
         </div>
-    </section>
 
-    <!-- Success Stories Marquee -->
-    <section class="section success-marquee-section no-padding-bottom">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Success Stories: From Debt Stress to Freedom</h2>
-                <p class="section-desc">Over 5,000+ Indians have already reclaimed their peace of mind.</p>
-            </div>
-        </div>
-        <div class="marquee-container">
-            <div class="marquee-content">
-                <!-- 50+ Items duplicated for infinite loop -->
-                <div class="marquee-item"><span>✅</span> Rahul (Delhi): ₹8L Debt Settle to ₹1.5L</div>
-                <div class="marquee-item"><span>✅</span> Priya (Mumbai): Harassment Stopped in 24h</div>
-                <div class="marquee-item"><span>✅</span> Vikram (Jaipur): SARFAESI Notice Won</div>
-                <div class="marquee-item"><span>✅</span> Sneha (Pune): 70% Credit Card Waiver</div>
-                <div class="marquee-item"><span>✅</span> Amit (Delhi): Stop 50+ Daily Calls</div>
-                <div class="marquee-item"><span>✅</span> Ritu (Lucknow): Personal Loan 60% Off</div>
-                <div class="marquee-item"><span>✅</span> Karan (Surat): Business Debt Resolved</div>
-                <div class="marquee-item"><span>✅</span> Neha (Indore): App Loan Harassment End</div>
-                <div class="marquee-item"><span>✅</span> Sunil (Patna): Credit Score Rebuilt</div>
-                <div class="marquee-item"><span>✅</span> Anita (Chennai): Legal Shield Activated</div>
-                <div class="marquee-item"><span>✅</span> Rohit (Bhopal): Bank Case Won in Court</div>
-                <div class="marquee-item"><span>✅</span> Pooja (Agra): Education Loan Restructure</div>
-                <div class="marquee-item"><span>✅</span> Vijay (Ranchi): Joint Liability Settle</div>
-                <div class="marquee-item"><span>✅</span> Simran (Amritsar): 65% Waiver on CC</div>
-                <div class="marquee-item"><span>✅</span> Abhay (Nagpur): Recovery Agents Banned</div>
-                <div class="marquee-item"><span>✅</span> Kavita (Madurai): FIR Against Agents</div>
-                <div class="marquee-item"><span>✅</span> Rohit (Bhopal): Bank Case Won in Court</div>
-                <div class="marquee-item"><span>✅</span> Jatin (Ahmedabad): BOB Recovery Stop</div>
-                <div class="marquee-item"><span>✅</span> Kiran (Hyderabad): IDFC First Waiver</div>
-                <div class="marquee-item"><span>✅</span> Ajay (Thane): IndusInd Loan Close</div>
-                <div class="marquee-item"><span>✅</span> Lata (Gwalior): YES Bank Settle (65%)</div>
-                <div class="marquee-item"><span>✅</span> Arun (Meerut): SCB Debt Reduction</div>
-                <div class="marquee-item"><span>✅</span> Meena (Varanasi): Canara Bank Settle</div>
-                <div class="marquee-item"><span>✅</span> Sanjay (Kolkata): Bandhan Bank Relief</div>
-                <div class="marquee-item"><span>✅</span> Tanvi (Jodhpur): Shriram Finance End</div>
-                <div class="marquee-item"><span>✅</span> Hari (Udaipur): Bajaj Finance Settle</div>
-                <div class="marquee-item"><span>✅</span> Jyoti (Salem): L&T Housing Settle</div>
-                <div class="marquee-item"><span>✅</span> Om (Dehradun): Cholamandalam Win</div>
-                <div class="marquee-item"><span>✅</span> Tara (Shimla): Muthoot Loan Closed</div>
-                <div class="marquee-item"><span>✅</span> Dev (Jammu): Manappuram Gold Relief</div>
-                <div class="marquee-item"><span>✅</span> Anu (Solapur): Home Credit Settle</div>
-                <div class="marquee-item"><span>✅</span> Bob (Hubli): Fullerton Legal Win</div>
-                <div class="marquee-item"><span>✅</span> Sia (Belgaum): Tata Capital Waivers</div>
-                <div class="marquee-item"><span>✅</span> Raj (Alwar): Aditya Birla Settle</div>
-                <div class="marquee-item"><span>✅</span> Uma (Ajmer): Piramal Finance End</div>
-                <div class="marquee-item"><span>✅</span> Ved (Kota): Hero Fincorp Relief</div>
-                <div class="marquee-item"><span>✅</span> Zia (Akola): Poonawalla Debt Settle</div>
-                <div class="marquee-item"><span>✅</span> Yash (Jalgaon): InCred Harassment Stop</div>
-                <div class="marquee-item"><span>✅</span> Shital (Dhule): Navi App Loan Won</div>
-                <div class="marquee-item"><span>✅</span> Nitin (Sangli): Dhani Debt Resolved</div>
-                <div class="marquee-item"><span>✅</span> Komal (Satara): KreditBee Relief</div>
-                <div class="marquee-item"><span>✅</span> Akash (Malegaon): EarlySalary Settle</div>
-                <div class="marquee-item"><span>✅</span> Tanuja (Sikar): MoneyTap Waiver Won</div>
-                <div class="marquee-item"><span>✅</span> Brijesh (Etawah): PaySense Legal Win</div>
-                <div class="marquee-item"><span>✅</span> Dolly (Rewa): Kissht Harassment End</div>
-                <div class="marquee-item"><span>✅</span> Prem (Bundi): CASHe Debt Managed</div>
-                <!-- Duplicate -->
-                <div class="marquee-item"><span>✅</span> Rahul (Delhi): ₹8L Debt Settle to ₹1.5L</div>
-                <div class="marquee-item"><span>✅</span> Priya (Mumbai): Harassment Stopped in 24h</div>
-                <div class="marquee-item"><span>✅</span> Vikram (Jaipur): SARFAESI Notice Won</div>
-                <div class="marquee-item"><span>✅</span> Sneha (Pune): 70% Credit Card Waiver</div>
-                <div class="marquee-item"><span>✅</span> Amit (Delhi): Stop 50+ Daily Calls</div>
-            </div>
-        </div>
-    </section>
+        <!-- Floating WhatsApp -->
+        <a href="https://wa.me/919076573857" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 32 32" class="whatsapp-icon" fill="white" width="32" height="32">
+                <path
+                    d="M16.75 3.5C9.55 3.5 3.75 9.3 3.75 16.5c0 2.6.75 5.05 2.1 7.2L4.5 29.5l6-1.6c2 .95 4.25 1.5 6.25 1.5 7.2 0 13-5.8 13-13s-5.8-13-13-13zm0 23.5c-1.95 0-3.85-.5-5.5-1.45l-.4-.2-4.1 1.1 1.1-3.95-.25-.4C6.55 20.45 6 18.55 6 16.5c0-5.95 4.8-10.75 10.75-10.75 5.95 0 10.75 4.8 10.75 10.75S22.7 27 16.75 27zM22.5 19.95c-.3-.15-1.75-.85-2-1-.25-.1-.45-.1-.65.15-.2.25-.75 1-.95 1.25-.15.15-.35.2-.65.05-1.75-.9-3-2.3-4-4.15-.15-.25 0-.4.15-.55l.45-.5c.15-.15.2-.25.3-.45.1-.2.05-.35-.05-.5-.05-.15-.65-1.55-.9-2.15-.25-.55-.5-.5-.65-.5h-.55c-.2 0-.5.1-.8.4-.3.3-1.15 1.1-1.15 2.7 0 1.6 1.15 3.15 1.3 3.35.15.2 2.25 3.45 5.45 4.85 2 .85 2.75.95 3.7.85 1.05-.1 2.35-.95 2.7-1.9.3-1 .3-1.8.2-1.95-.15-.2-.35-.3-.65-.45z"
+                    fill="#FFF" />
+            </svg>
+        </a>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="section faq-section bg-light">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Common Legal Queries (SEO FAQ)</h2>
-                <p class="section-desc">Answering your doubts about debt, RBI guidelines, and legal rights.</p>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">Can I be arrested for not paying a personal loan? <span
-                            class="toggle-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>No. Defaulting on a loan is a civil case, not a criminal one. You cannot be arrested just for
-                            default. However, cheque bounce cases (Section 138) or hiding assets can lead to criminal
-                            proceedings, which is why professional legal representation is vital.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">What are the RBI guidelines for recovery agents in 2024? <span
-                            class="toggle-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>RBI guidelines strictly forbid calling before 8 AM or after 7 PM, using abusive language, and
-                            contacting friends/family. Agents must also carry identification and an authorization letter
-                            from the bank.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Is loan settlement legal in India? <span
-                            class="toggle-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>Yes, loan settlement is a perfectly legal negotiation process between a borrower and a lender
-                            (Bank/NBFC) under the Indian Contract Act. It allows the borrower to close the debt by
-                            paying a mutually agreed lump sum amount.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">How can I stop harassment from Chinese loan apps? <span
-                            class="toggle-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>You must file a cyber-crime complaint and issue a formal legal notice. DebtCure specializes
-                            in handling aggressive recovery tactics from app-based lenders, providing you with a legal
-                            shield and privacy protection.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Can recovery agents visit my neighbors/workplace? <span
-                            class="toggle-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>This is a serious violation of your Right to Privacy. We can help you file a formal complaint
-                            with the Banking Ombudsman and seek damages for defamation and mental agony caused by such
-                            illegal visits.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">What is Section 138 (Cheque Bounce) in debt cases? <span
-                            class="toggle-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>Section 138 of the Negotiable Instruments Act deals with dishonored cheques. It is a criminal
-                            offense if a cheque is bounced due to insufficient funds. DebtCure provides legal defense to
-                            help you handle these notices and settle out of court.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">How does settlement affect my CIBIL score? <span
-                            class="toggle-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>A settlement shows as 'Settled' on your report, which temporarily lowers your score. However,
-                            once you are debt-free, we guide you through our Credit Score Builder program to restore it
-                            within 6-12 months through legal and financial strategies.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Can I travel abroad if I have a loan default? <span
-                            class="toggle-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>Yes, in 99% of cases, you can travel abroad. A loan default is a civil matter and does not
-                            restrict your movement unless there is a specific court order or if you are declared a
-                            'Willful Defaulter' by an investigative agency.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Are WhatsApp notices from recovery agents legal? <span
-                            class="toggle-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>Most WhatsApp notices sent by agents are fake or unofficial templates meant to scare you. A
-                            real court summons is served physically or through registered post. We verify all such
-                            digital notices to ensure you are not being duped.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">How to file a complaint in Banking Ombudsman? <span
-                            class="toggle-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>You can file it through the CMS portal of RBI. However, you must first have a rejected
-                            complaint from the bank. DebtCure lawyers handle the entire drafting and filing process to
-                            ensure your voice is heard by the regulators.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 7: Strong CTA -->
-    <section id="contact" class="section cta-section bg-primary text-white">
-        <div class="container cta-content">
-            <h2 class="cta-title">Don’t Let Harassment Ruin Your Health.</h2>
-            <p class="cta-subtitle">Our legal team is standing by to take charge of your situation today.</p>
-            <div class="cta-buttons">
-                <button class="btn btn-secondary large" id="consultation-btn">Start My Legal Recovery</button>
-                <a href="tel:+919076573857" class="btn btn-outline-white large">Call Support Now</a>
-                <a href="https://wa.me/919076573857" class="btn btn-whatsapp large">WhatsApp Consultation</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3 class="footer-logo">DebtCure</h3>
-                    <p>Empowering you with legal protection against unfair loan recovery practices.</p>
-                    <div class="social-icons">
-                        <!-- Social Icons Placeholder -->
-                        <span>📘</span> <span>🐦</span> <span>📷</span>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="your-rights.html">Know Your Rights</a></li>
-                        <li><a href="steps.html">Steps</a></li>
-                        <li><a href="stories.html">Stories</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="refund-policy.html">Refund Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <p>📧 debtcureindia@gmail.com</p>
-                    <p>📍 Patiala House Court & Saket Court, New Delhi</p>
-                    <p>📞 +91-9076573857</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 DebtCure. All Rights Reserved.</p>
-                <p class="disclaimer">Disclaimer: This platform provides consultation and legal support. We are not a
-                    bank or NBFC.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Lead Capture Modal -->
-    <div id="lead-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Get Your Free Legal Advice</h2>
-            <p>Fill out the form below and our expert will call you shortly.</p>
-            <form id="lead-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <textarea placeholder="Briefly describe your issue" rows="3"></textarea>
-                <button type="submit" class="btn btn-primary full-width">Submit Request</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/919076573857" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 32 32" class="whatsapp-icon" fill="white" width="32" height="32">
-            <path
-                d="M16.75 3.5C9.55 3.5 3.75 9.3 3.75 16.5c0 2.6.75 5.05 2.1 7.2L4.5 29.5l6-1.6c2 .95 4.25 1.5 6.25 1.5 7.2 0 13-5.8 13-13s-5.8-13-13-13zm0 23.5c-1.95 0-3.85-.5-5.5-1.45l-.4-.2-4.1 1.1 1.1-3.95-.25-.4C6.55 20.45 6 18.55 6 16.5c0-5.95 4.8-10.75 10.75-10.75 5.95 0 10.75 4.8 10.75 10.75S22.7 27 16.75 27zM22.5 19.95c-.3-.15-1.75-.85-2-1-.25-.1-.45-.1-.65.15-.2.25-.75 1-.95 1.25-.15.15-.35.2-.65.05-1.75-.9-3-2.3-4-4.15-.15-.25 0-.4.15-.55l.45-.5c.15-.15.2-.25.3-.45.1-.2.05-.35-.05-.5-.05-.15-.65-1.55-.9-2.15-.25-.55-.5-.5-.65-.5h-.55c-.2 0-.5.1-.8.4-.3.3-1.15 1.1-1.15 2.7 0 1.6 1.15 3.15 1.3 3.35.15.2 2.25 3.45 5.45 4.85 2 .85 2.75.95 3.7.85 1.05-.1 2.35-.95 2.7-1.9.3-1 .3-1.8.2-1.95-.15-.2-.35-.3-.65-.45z"
-                fill="#FFF" />
-        </svg>
-    </a>
-
-    <script src="js/app.js"></script>
+        <script src="js/app.js"></script>
 </body>
 
 </html>

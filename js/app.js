@@ -1,7 +1,31 @@
+/**
+ * DebtCure - Main Application Logic
+ */
+
+// Global state
+let nav;
+let modal;
+let exitIntentShown = false;
+
+// Initialize all components
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
+    initMobileMenu();
+    initStickyHeader();
+    initSmoothScroll();
+    initFAQ();
+    initModal();
+    initLeadForm();
+    initAnimations();
+    initCarousel();
+    initCalculator();
+});
+
+// Mobile Menu Toggle
+function initMobileMenu() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
-    const nav = document.querySelector('.nav');
+    nav = document.querySelector('.nav');
+
+    if (!mobileMenuBtn || !nav) return;
 
     mobileMenuBtn.addEventListener('click', () => {
         nav.classList.toggle('active');
@@ -19,99 +43,131 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Sticky Header
+    // Close menu when clicking links (mobile)
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 900) {
+                nav.classList.remove('active');
+                const spans = mobileMenuBtn.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+    });
+}
+
+// Sticky Header
+function initStickyHeader() {
     const header = document.getElementById('main-header');
+    if (!header) return;
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
             header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.05)';
-            header.style.padding = '0';
+            header.classList.add('scrolled');
         } else {
             header.style.boxShadow = 'none';
+            header.classList.remove('scrolled');
         }
     });
+}
 
-    // Smooth Scrolling for Anchors
+// Smooth Scrolling
+function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                targetElement.scrollIntoView({
+                e.preventDefault();
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
                     behavior: 'smooth'
                 });
-                // Close mobile menu if open
-                if (nav.style.display === 'block' && window.innerWidth <= 900) {
-                    nav.style.display = 'none';
-                }
             }
         });
     });
+}
 
-    // FAQ Architecture
+// FAQ Accordion
+function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
+        if (!question) return;
+
         question.addEventListener('click', () => {
-            // Close other items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
-            });
+            const isActive = item.classList.contains('active');
+
+            // Close all
+            faqItems.forEach(i => i.classList.remove('active'));
+
             // Toggle current
-            item.classList.toggle('active');
-        });
-    });
-
-    // Modal Logic
-    const modal = document.getElementById('lead-modal');
-    const closeBtn = document.querySelector('.close-modal');
-    const consultBtns = document.querySelectorAll('.btn-primary'); // All primary buttons trigger modal
-
-    // Open modal on button clicks (except submit)
-    consultBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            if (btn.type !== 'submit') {
-                e.preventDefault();
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            if (!isActive) {
+                item.classList.add('active');
             }
         });
     });
+}
 
-    // Close modal
-    closeBtn.addEventListener('click', () => {
+// Modal Toggle Logic
+function initModal() {
+    modal = document.getElementById('lead-modal');
+    const closeBtn = document.querySelector('.close-modal');
+    const triggerButtons = document.querySelectorAll('#consultation-btn, #consultation-btn-sidebar, #calc-cta-btn, .btn-primary.small');
+
+    if (!modal || !closeBtn) return;
+
+    const openModal = () => {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
+    };
+
+    triggerButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
     });
 
-    // Close on outside click
+    closeBtn.addEventListener('click', closeModal);
+
     window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
+        if (e.target === modal) closeModal();
     });
 
-    // Exit Intent Popup
-    let exitIntentShown = false;
+    // Exit Intent
     document.addEventListener('mouseleave', (e) => {
         if (e.clientY < 0 && !exitIntentShown) {
-            modal.style.display = 'flex';
+            openModal();
             exitIntentShown = true;
         }
     });
+}
 
-    // Form Submission Logic: Redirect to WhatsApp
+// Form Submission -> WhatsApp
+function initLeadForm() {
     const form = document.getElementById('lead-form');
+    if (!form) return;
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Extract form data
-        const name = form.querySelector('input[type="text"]').value;
-        const phone = form.querySelector('input[type="tel"]').value;
+        const name = form.querySelector('input[placeholder="Your Name"]').value;
+        const phone = form.querySelector('input[placeholder="Phone Number"]').value;
         const issue = form.querySelector('textarea').value;
         const btn = form.querySelector('button');
         const originalText = btn.innerText;
@@ -119,27 +175,25 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.innerText = 'Redirecting to WhatsApp...';
         btn.disabled = true;
 
-        // Construct WhatsApp Message
         const message = `Hello DebtCure, I need legal advice.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Issue:* ${issue}`;
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/919076573857?text=${encodedMessage}`;
+        const whatsappUrl = `https://wa.me/919076573857?text=${encodeURIComponent(message)}`;
 
-        // Redirect after a short delay
         setTimeout(() => {
             window.open(whatsappUrl, '_blank');
-            modal.style.display = 'none';
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
             btn.innerText = originalText;
             btn.disabled = false;
             form.reset();
-            document.body.style.overflow = 'auto';
         }, 800);
     });
+}
 
-    // Intersection Observer for Animations
-    const observerOptions = {
-        threshold: 0.1
-    };
-
+// Reveal Animations
+function initAnimations() {
+    const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -149,26 +203,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Add fade-in-up class to sections/elements to animate
-    const animatedElements = document.querySelectorAll('.service-card, .feature-item, .section-title, .hero-text, .rights-content, .scenario-card');
+    const animatedElements = document.querySelectorAll('.service-card, .feature-item, .section-title, .hero-text, .rights-content, .testimonial-card, .marquee-container');
     animatedElements.forEach(el => {
         el.classList.add('fade-in-up');
         observer.observe(el);
     });
+}
 
-    // Hero Carousel Auto-Rotation
+// Hero Carousel
+function initCarousel() {
     const slides = document.querySelectorAll('.carousel-slide');
-    if (slides.length > 0) {
-        let currentSlide = 0;
-        const slideInterval = 4000; // 4 seconds
+    if (slides.length <= 1) return;
 
-        setInterval(() => {
-            // Remove active class from current
-            slides[currentSlide].classList.remove('active');
-            // Move to next
-            currentSlide = (currentSlide + 1) % slides.length;
-            // Add active class to new
-            slides[currentSlide].classList.add('active');
-        }, slideInterval);
-    }
-});
+    let currentSlide = 0;
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 5000);
+}
+
+// Loan Settlement Calculator
+function initCalculator() {
+    const slider = document.getElementById('loan-amount-slider');
+    const loanDisplay = document.getElementById('current-loan-display');
+    const settlementDisplay = document.getElementById('settlement-amount-display');
+    const savingsDisplay = document.getElementById('savings-display');
+
+    if (!slider) return;
+
+    const updateCalculations = () => {
+        const amount = parseInt(slider.value);
+        const settlement = Math.round(amount * 0.3); // 30% rule
+        const savings = amount - settlement;
+
+        loanDisplay.textContent = amount.toLocaleString('en-IN');
+        settlementDisplay.textContent = settlement.toLocaleString('en-IN');
+        savingsDisplay.textContent = savings.toLocaleString('en-IN');
+    };
+
+    slider.addEventListener('input', updateCalculations);
+    updateCalculations(); // Initial run
+}
