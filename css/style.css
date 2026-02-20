@@ -1822,6 +1822,12 @@ img {
     letter-spacing: -0.02em;
     position: relative;
     z-index: 2;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    /* Allows wrapping ONLY if absolutely zero space, but usually nowrap is better for values */
 }
 
 .savings-badge {
@@ -1836,6 +1842,18 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
     z-index: 2;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .result-amount {
+        font-size: 1.8rem;
+    }
+
+    .savings-badge {
+        font-size: 0.85rem;
+        padding: 6px 15px;
+    }
 }
 
 .savings-badge span {
