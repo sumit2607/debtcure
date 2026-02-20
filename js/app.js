@@ -261,8 +261,10 @@ function initCalculator() {
 
     const updateCalculations = () => {
         const amount = parseInt(slider.value);
-        const settlement = Math.round(amount * 0.3); // 30% rule
-        const savings = amount - settlement;
+        const settlementMin = Math.round(amount * 0.3); // 30%
+        const settlementMax = Math.round(amount * 0.4); // 40%
+        const savingsMin = amount - settlementMax;
+        const savingsMax = amount - settlementMin; // Calculate maximum savings based on minimum settlement
 
         // Update slider track background
         const min = parseInt(slider.min) || 50000;
@@ -271,8 +273,8 @@ function initCalculator() {
         slider.style.background = `linear-gradient(to right, var(--accent-color) ${percentage}%, #e9ecef ${percentage}%)`;
 
         loanDisplay.textContent = amount.toLocaleString('en-IN');
-        settlementDisplay.textContent = settlement.toLocaleString('en-IN');
-        savingsDisplay.textContent = savings.toLocaleString('en-IN');
+        settlementDisplay.textContent = `${settlementMin.toLocaleString('en-IN')} - ${settlementMax.toLocaleString('en-IN')}`;
+        savingsDisplay.textContent = `${savingsMin.toLocaleString('en-IN')} - ${savingsMax.toLocaleString('en-IN')}`;
     };
 
     slider.addEventListener('input', updateCalculations);
