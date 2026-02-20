@@ -7,6 +7,11 @@ let nav;
 let modal;
 let exitIntentShown = false;
 
+// Analytics Helper
+function trackEvent(eventName, params = {}) {
+    window.dispatchEvent(new CustomEvent('analytics-event', { detail: { eventName, params } }));
+}
+
 // Initialize all components
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
@@ -18,7 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initAnimations();
     initCarousel();
     initCalculator();
+    initGlobalTracking();
 });
+
+// Global Link Tracking
+function initGlobalTracking() {
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link) {
+            if (link.href.startsWith('tel:')) {
+                trackEvent('click_contact', { method: 'phone', link_url: link.href });
+            } else if (link.href.includes('wa.me')) {
+                trackEvent('click_contact', { method: 'whatsapp', link_url: link.href });
+            }
+        }
+    });
+}
 
 // Mobile Menu Toggle
 function initMobileMenu() {
@@ -139,6 +159,7 @@ function initModal() {
     triggerButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
+            trackEvent('click_cta_button', { button_id: btn.id || 'unknown', button_text: btn.innerText });
             openModal();
         });
     });
@@ -177,6 +198,8 @@ function initLeadForm() {
 
         const message = `Hello DebtCure, I need legal advice.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Issue:* ${issue}`;
         const whatsappUrl = `https://wa.me/919076573857?text=${encodeURIComponent(message)}`;
+
+        trackEvent('generate_lead', { issue_length: issue.length });
 
         setTimeout(() => {
             window.open(whatsappUrl, '_blank');
@@ -232,10 +255,18 @@ function initCalculator() {
 
     if (!slider) return;
 
+    let prevAmount = parseInt(slider.value);
+
     const updateCalculations = () => {
         const amount = parseInt(slider.value);
         const settlement = Math.round(amount * 0.3); // 30% rule
         const savings = amount - settlement;
+
+        // Update slider track background
+        const min = parseInt(slider.min) || 50000;
+        const max = parseInt(slider.max) || 5000000;
+        const percentage = ((amount - min) / (max - min)) * 100;
+        slider.style.background = `linear-gradient(to right, var(--accent-color) ${percentage}%, #e9ecef ${percentage}%)`;
 
         loanDisplay.textContent = amount.toLocaleString('en-IN');
         settlementDisplay.textContent = settlement.toLocaleString('en-IN');
@@ -243,5 +274,8 @@ function initCalculator() {
     };
 
     slider.addEventListener('input', updateCalculations);
+    slider.addEventListener('change', () => {
+        trackEvent('use_calculator', { amount_selected: parseInt(slider.value) });
+    });
     updateCalculations(); // Initial run
 }

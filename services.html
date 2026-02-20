@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | DebtCure</title>
+    <meta name="google-site-verification" content="04yGYdu6A6_jEy0ohwNoGZPe7XmgMEuFVFpmMNixd08" />
     <meta name="description"
         content="Legal protection services against loan harassment - Stop calls, Legal Notices, RBI Complaints, and Settlement Assistance.">
     <link rel="stylesheet" href="css/style.css">
@@ -177,6 +178,44 @@
         </div>
     </section>
 
+    <!-- Settlement Calculator -->
+    <section class="section calculator-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Calculate Your Debt Freedom</h2>
+                <p class="section-desc">See how much you could save with a legal settlement instead of suffering
+                    harassment. We typically aim for a <strong>30% settlement</strong>.</p>
+            </div>
+
+            <div class="calc-container">
+                <div class="calc-grid">
+                    <div class="calc-inputs" style="flex: 1;">
+                        <div class="calc-input-group">
+                            <label class="calc-label">Total Outstanding Loan Amount</label>
+                            <input type="range" min="50000" max="5000000" step="10000" value="500000"
+                                class="calc-slider" id="loan-amount-slider">
+                            <div class="amount-display">₹ <span id="current-loan-display">5,00,000</span></div>
+                        </div>
+                        <p class="text-secondary small">Slide to select your total debt across all banks/apps.</p>
+                    </div>
+
+                    <div class="calc-results" style="flex: 1;">
+                        <div class="result-card">
+                            <p>Potential Settlement Amount</p>
+                            <div class="result-amount">₹ <span id="settlement-amount-display">1,50,000</span></div>
+                            <div class="savings-badge">Estimated Savings: ₹ <span id="savings-display">3,50,000</span>
+                            </div>
+                            <p class="small mt-20" style="opacity: 0.8;">*Basis professional legal negotiation. Results
+                                may vary by bank.</p>
+                        </div>
+                        <button class="btn btn-secondary full-width mt-20" id="calc-cta-btn">Get This Settlement
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section id="contact" class="section cta-section">
         <div class="container cta-content">
@@ -253,6 +292,7 @@
     </a>
 
     <script src="js/app.js"></script>
+    <script type="module" src="js/firebase-init.js"></script>
 </body>
 
 </html>
