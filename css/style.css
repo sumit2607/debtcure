@@ -131,7 +131,8 @@ img {
 .btn-outline-white {
     border-color: var(--white);
     color: var(--white);
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
 }
 
 .btn-outline-white:hover {
@@ -2087,11 +2088,23 @@ img {
     background: linear-gradient(145deg, var(--primary-color) 0%, #112236 100%);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 /* Layout Helpers */
-.justify-center { justify-content: center !important; }
-.align-center { align-items: center !important; }
-.flex-wrap { flex-wrap: wrap !important; }
-.gap-20 { gap: 20px !important; }
+.justify-center {
+    justify-content: center !important;
+}
+
+.align-center {
+    align-items: center !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+
+.gap-20 {
+    gap: 20px !important;
+}
 
 @media (max-width: 768px) {
     .floating-whatsapp {
@@ -2100,10 +2113,12 @@ img {
         bottom: 20px;
         right: 20px;
     }
+
     .hero-buttons {
         flex-direction: column;
         width: 100%;
     }
+
     .hero-buttons .btn {
         width: 100%;
     }
@@ -2111,9 +2126,13 @@ img {
 
 /* Hero Mobile Spacing Fix */
 @media (max-width: 768px) {
-    .hero-section, .page-header {
-        padding-bottom: 120px !important; /* Space for WhatsApp icon */
+
+    .hero-section,
+    .page-header {
+        padding-bottom: 120px !important;
+        /* Space for WhatsApp icon */
     }
+
     .hero-buttons {
         gap: 12px !important;
     }
