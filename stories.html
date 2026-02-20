@@ -5,11 +5,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1SSM5TR15"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-T1SSM5TR15');
+        gtag('config', 'G-T1SSM5TR15');
     </script>
 
     <meta charset="UTF-8">
@@ -28,7 +28,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://debtcurein.online/stories.html">
     <meta property="og:title" content="Success Stories | DebtCure">
-    <meta property="og:description" content="Read how DebtCure helped thousands of Indians stop loan harassment and settle their debts.">
+    <meta property="og:description"
+        content="Read how DebtCure helped thousands of Indians stop loan harassment and settle their debts.">
     <meta property="og:image" content="https://debtcurein.online/images/og-image.jpg">
 
 
@@ -36,7 +37,8 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://debtcurein.online/stories.html">
     <meta property="twitter:title" content="Success Stories | DebtCure">
-    <meta property="twitter:description" content="Read how DebtCure helped thousands of Indians stop loan harassment and settle their debts.">
+    <meta property="twitter:description"
+        content="Read how DebtCure helped thousands of Indians stop loan harassment and settle their debts.">
     <meta property="twitter:image" content="https://debtcurein.online/images/og-image.jpg">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -44,8 +46,28 @@
 
 <body>
 
-    <!-- Header -->
-    <header class="header" id="main-header">
+    
+    <!-- Full Screen Shimmer Loader -->
+    <div id="page-loader" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #F8FAFC; z-index: 999999; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: opacity 0.5s ease, visibility 0.5s ease;">
+        <div class="loader-content" style="text-align: center;">
+            <svg class="loader-icon pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="animation: pulse-animation 1.5s infinite ease-in-out;">
+                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="#10B981" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 12L11 14L15 10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div class="shimmer-text" style="margin-top: 15px; font-weight: 600; font-family: 'Poppins', sans-serif; font-size: 1.2rem; background: linear-gradient(90deg, #0E1A2B 0%, #94A3B8 50%, #0E1A2B 100%); background-size: 200% auto; color: transparent; -webkit-background-clip: text; background-clip: text; animation: shimmer 2s linear infinite;">Loading DebtCure...</div>
+        </div>
+        <style>
+            @keyframes pulse-animation {
+                0% { transform: scale(0.95); opacity: 0.8; }
+                50% { transform: scale(1.05); opacity: 1; }
+                100% { transform: scale(0.95); opacity: 0.8; }
+            }
+            @keyframes shimmer {
+                to { background-position: 200% center; }
+            }
+        </style>
+    </div>
+<header class="header" id="main-header">
         <div class="container header-container">
             <a href="index.html" class="logo" aria-label="DebtCure Home">
                 <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,6 +198,57 @@
                         </div>
                     </div>
                 </article>
+
+                <!-- Case 5 -->
+                <article class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <div class="case-badge mb-20">Saved from Personal Loan Trap</div>
+                    <p class="testimonial-text">I lost my job and couldn't pay my EMI for 3 months. The bank agents
+                        started calling my relatives and using abusive language. DebtCure stepped in immediately. Their
+                        advocates sent a legal notice to the bank's nodal officer. Not only did the harassment stop
+                        completely, but they also helped me restructure my loan into manageable EMIs with zero
+                        penalties.</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Rajesh Kumar</strong>
+                            <span>IT Professional, Bangalore</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 6 -->
+                <article class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <div class="case-badge mb-20">Multiple Credit Cards Settled</div>
+                    <p class="testimonial-text">I was drowning in debt from 4 different credit cards with a total
+                        outstanding of over ₹12 Lakhs. The constant barrage of messages and threats was ruining my
+                        mental health. DebtCure's expert lawyers took over all communication. Within 4 months, they
+                        negotiated a final settlement of just ₹4.5 Lakhs across all cards and secured my No Dues
+                        Certificates.</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Priya Sharma</strong>
+                            <span>Marketing Manager, Mumbai</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 7 -->
+                <article class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <div class="case-badge mb-20">Fake Legal Notice Handled</div>
+                    <p class="testimonial-text">Recovery agents sent me a fake police warrant on WhatsApp for a delayed
+                        personal loan of ₹2 Lakhs. I was terrified. DebtCure verified the document, proved it was
+                        forged, and filed a counter-complaint against the recovery agency for impersonation and criminal
+                        intimidation. The bank immediately apologized and offered a massive discount to close the loan.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Amit Patel</strong>
+                            <span>Business Owner, Ahmedabad</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -290,7 +363,7 @@
         </svg>
     </a>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.js" defer></script>
     <script type="module" src="js/firebase-init.js"></script>
 </body>
 

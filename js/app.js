@@ -279,3 +279,16 @@ function initCalculator() {
     });
     updateCalculations(); // Initial run
 }
+
+
+// Loader removal
+window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        loader.style.opacity = '0';
+        loader.style.visibility = 'hidden';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500); // Wait for transition
+    }
+});
