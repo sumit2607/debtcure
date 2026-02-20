@@ -2108,3 +2108,13 @@ img {
         width: 100%;
     }
 }
+
+/* Hero Mobile Spacing Fix */
+@media (max-width: 768px) {
+    .hero-section, .page-header {
+        padding-bottom: 120px !important; /* Space for WhatsApp icon */
+    }
+    .hero-buttons {
+        gap: 12px !important;
+    }
+}
