@@ -3,7 +3,7 @@ import glob
 import re
 from datetime import datetime
 
-BASE_URL = "https://www.debtcurein.online"
+BASE_URL = "https://debtcurein.online"
 
 def process_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
