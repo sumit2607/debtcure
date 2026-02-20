@@ -1,0 +1,58 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dynamic, modern trust seal -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F9E29C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Circle Border -->
+  <circle cx="100" cy="100" r="95" stroke="url(#goldGradient)" stroke-width="2" fill="none" />
+  
+  <!-- Outer Ring Background -->
+  <circle cx="100" cy="100" r="90" fill="#0F172A" /> <!-- Navy background for contrast -->
+  
+  <!-- Ring for Text -->
+  <circle cx="100" cy="100" r="75" stroke="#FFFFFF" stroke-width="0.5" stroke-dasharray="2 2" fill="none" opacity="0.4" />
+
+  <!-- Government of India / MSME Registered Curved Text -->
+  <path id="curveTop" d="M 30,100 A 70,70 0 1,1 170,100" fill="none" />
+  <text font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#F9E29C">
+    <textPath href="#curveTop" startOffset="50%" text-anchor="middle">
+      GOVERNMENT OF INDIA • MSME REGISTERED
+    </textPath>
+  </text>
+
+  <path id="curveBottom" d="M 30,100 A 70,70 0 0,0 170,100" fill="none" />
+  <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">
+    <textPath href="#curveBottom" startOffset="50%" text-anchor="middle">
+      TRUSTED BUSINESS VERIFIED
+    </textPath>
+  </text>
+
+  <!-- Inner Seal -->
+  <circle cx="100" cy="100" r="55" fill="url(#goldGradient)" filter="url(#shadow)" />
+  
+  <!-- MSME Center Text -->
+  <text x="100" y="95" font-family="'Outfit', sans-serif" font-size="24" font-weight="900" fill="#0F172A" text-anchor="middle">MSME</text>
+  <text x="100" y="115" font-family="'Outfit', sans-serif" font-size="10" font-weight="700" fill="#0F172A" text-anchor="middle">UDYAM REGISTERED</text>
+  
+  <!-- Decorative Stars or Dots -->
+  <circle cx="100" cy="100" r="50" stroke="#0F172A" stroke-width="0.5" fill="none" opacity="0.2" />
+  
+  <!-- Emblem Icon (Simplified Shield/Tick) -->
+  <path d="M 85,130 L 95,140 L 115,120" stroke="#0F172A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

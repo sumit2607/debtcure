@@ -81,7 +81,8 @@
     <div id="page-loader"
         style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #F8FAFC; z-index: 999999; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: opacity 0.5s ease, visibility 0.5s ease;">
         <div class="loader-content" style="text-align: center;">
-            <img src="assets/logo.png" alt="Loading..." class="loader-icon pulse" width="80" height="80" style="animation: pulse-animation 1.5s infinite ease-in-out; border-radius: 12px; margin-bottom: 20px;">
+            <img src="assets/logo.png" alt="Loading..." class="loader-icon pulse" width="80" height="80"
+                style="animation: pulse-animation 1.5s infinite ease-in-out; border-radius: 12px; margin-bottom: 20px;">
             <div class="shimmer-text"
                 style="margin-top: 15px; font-weight: 600; font-family: 'Poppins', sans-serif; font-size: 1.2rem; background: linear-gradient(90deg, #0E1A2B 0%, #94A3B8 50%, #0E1A2B 100%); background-size: 200% auto; color: transparent; -webkit-background-clip: text; background-clip: text; animation: shimmer 2s linear infinite;">
                 Loading DebtCure...</div>
@@ -203,6 +204,16 @@
                 <div class="hero-buttons justify-center">
                     <a href="#contact" class="btn btn-primary large">Get Free Legal Consultation</a>
                     <a href="tel:+919076573857" class="btn btn-outline-white large">📞 Talk to Expert Now</a>
+                </div>
+                <!-- MSME Trust Badge -->
+                <div class="hero-trust-flex">
+                    <div class="trust-badge-container">
+                        <img src="assets/msme-badge.svg" alt="Govt. of India MSME Registered" loading="lazy">
+                        <div class="trust-badge-text">
+                            <span class="title">Govt. of India Registered</span>
+                            <span class="subtitle">MSME Udyam Verified Business<br>Trusted Legal Consulting</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -769,6 +780,11 @@
                             <span role="img" aria-label="Facebook">📘</span> <span role="img"
                                 aria-label="Twitter">🐦</span> <span role="img" aria-label="Instagram">📷</span>
                         </div>
+                        <!-- MSME Seal -->
+                        <div class="footer-seal">
+                            <img src="assets/msme-badge.svg" alt="MSME Registered Business" width="50" height="50">
+                            <span>Govt. of India<br>MSME Registered Business</span>
+                        </div>
                     </div>
                     <div class="footer-col">
                         <h4>Quick Links</h4>
@@ -826,6 +842,12 @@
                     fill="#FFF" />
             </svg>
         </a>
+
+        <!-- Floating Trust Badge -->
+        <div class="floating-trust">
+            <img src="assets/msme-badge.svg" alt="MSME Verified" width="30" height="30">
+            <span>Govt. Registered Business</span>
+        </div>
 
         <script src="js/app.js" defer></script>
         <script type="module" src="js/firebase-init.js"></script>
