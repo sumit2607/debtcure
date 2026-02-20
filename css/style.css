@@ -2270,4 +2270,49 @@ img {
         margin-left: auto;
         margin-right: auto;
     }
+}/* Secure Payment Section */
+.secure-payment-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.secure-payment-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.payment-methods-img {
+    height: 40px;
+    width: auto;
+    filter: brightness(1.2) grayscale(0.2);
+    transition: filter 0.3s ease;
+}
+
+.payment-methods-img:hover {
+    filter: brightness(1.3) grayscale(0);
+}
+
+.verified-badge-img {
+    height: 45px;
+    width: auto;
+}
+
+.payment-trust-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .secure-payment-flex {
+        justify-content: center;
+        gap: 20px;
+    }
 }
