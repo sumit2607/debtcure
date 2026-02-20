@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap | DebtCure</title>
+    <meta name="theme-color" content="#0E1A2B">
     <meta name="description" content="Complete sitemap and directory of all pages on the DebtCure website.">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@
     <!-- Full Screen Shimmer Loader -->
     <div id="page-loader" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #F8FAFC; z-index: 999999; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: opacity 0.5s ease, visibility 0.5s ease;">
         <div class="loader-content" style="text-align: center;">
-            <svg class="loader-icon pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="animation: pulse-animation 1.5s infinite ease-in-out;">
+            <svg aria-hidden="true" class="loader-icon pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="animation: pulse-animation 1.5s infinite ease-in-out;">
                 <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="#10B981" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M9 12L11 14L15 10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -49,7 +50,7 @@
 <header class="header" id="main-header">
         <div class="container header-container">
             <a href="index.html" class="logo" aria-label="DebtCure Home">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="var(--primary-color)" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M9 12L11 14L15 10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -80,7 +81,7 @@
             <div class="header-actions">
                 <a href="index.html#contact" class="btn btn-primary small">Get Legal Help</a>
             </div>
-            <button class="mobile-menu-toggle" aria-label="Menu">
+            <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -134,7 +135,7 @@
                     <h3 class="footer-logo">DebtCure</h3>
                     <p>Empowering you with legal protection against unfair loan recovery practices.</p>
                     <div class="social-icons">
-                        <span>📘</span> <span>🐦</span> <span>📷</span>
+                        <span role="img" aria-label="Facebook">📘</span> <span role="img" aria-label="Twitter">🐦</span> <span role="img" aria-label="Instagram">📷</span>
                     </div>
                 </div>
                 <div class="footer-col">

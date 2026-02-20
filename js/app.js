@@ -189,6 +189,8 @@ function initLeadForm() {
 
         const name = form.querySelector('input[placeholder="Your Name"]').value;
         const phone = form.querySelector('input[placeholder="Phone Number"]').value;
+        const loanAmount = form.querySelector('input[placeholder="Total Loan Outstanding (₹)"]').value;
+        const emiDue = form.querySelector('input[placeholder="EMI Due From (Months/Date)"]').value;
         const issue = form.querySelector('textarea').value;
         const btn = form.querySelector('button');
         const originalText = btn.innerText;
@@ -196,7 +198,7 @@ function initLeadForm() {
         btn.innerText = 'Redirecting to WhatsApp...';
         btn.disabled = true;
 
-        const message = `Hello DebtCure, I need legal advice.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Issue:* ${issue}`;
+        const message = `Hello DebtCure, I need legal advice.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Total Loan Outstanding:* ${loanAmount}\n*EMI Due From:* ${emiDue}\n*Issue:* ${issue}`;
         const whatsappUrl = `https://wa.me/919076573857?text=${encodeURIComponent(message)}`;
 
         trackEvent('generate_lead', { issue_length: issue.length });

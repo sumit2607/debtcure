@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Score Builder | DebtCure</title>
+    <meta name="theme-color" content="#0E1A2B">
     <link rel="canonical" href="https://www.debtcure.online/credit-score-builder.html" />
     <meta name="google-site-verification" content="04yGYdu6A6_jEy0ohwNoGZPe7XmgMEuFVFpmMNixd08" />
     <meta name="description"
@@ -49,7 +50,7 @@
     <!-- Full Screen Shimmer Loader -->
     <div id="page-loader" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #F8FAFC; z-index: 999999; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: opacity 0.5s ease, visibility 0.5s ease;">
         <div class="loader-content" style="text-align: center;">
-            <svg class="loader-icon pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="animation: pulse-animation 1.5s infinite ease-in-out;">
+            <svg aria-hidden="true" class="loader-icon pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="animation: pulse-animation 1.5s infinite ease-in-out;">
                 <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="#10B981" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M9 12L11 14L15 10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -69,7 +70,7 @@
 <header class="header" id="main-header">
         <div class="container header-container">
             <a href="index.html" class="logo" aria-label="DebtCure Home">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="var(--primary-color)"
                         stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M9 12L11 14L15 10" stroke="#fff" stroke-width="2" stroke-linecap="round"
@@ -102,7 +103,7 @@
             <div class="header-actions">
                 <a href="#contact" class="btn btn-primary small">Get Legal Help</a>
             </div>
-            <button class="mobile-menu-toggle" aria-label="Menu">
+            <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -220,7 +221,7 @@
                     <h3 class="footer-logo">DebtCure</h3>
                     <p>Empowering you with legal protection against unfair loan recovery practices.</p>
                     <div class="social-icons">
-                        <span>📘</span> <span>🐦</span> <span>📷</span>
+                        <span role="img" aria-label="Facebook">📘</span> <span role="img" aria-label="Twitter">🐦</span> <span role="img" aria-label="Instagram">📷</span>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -257,9 +258,11 @@
             <h2>Get Your Free Legal Advice</h2>
             <p>Fill out the form below and our expert will call you shortly.</p>
             <form id="lead-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <textarea placeholder="Briefly describe your issue" rows="3"></textarea>
+                <input type="text" placeholder="Your Name" aria-label="Your Name" required>
+                <input type="tel" placeholder="Phone Number" aria-label="Phone Number" required>
+                    <input type="text" placeholder="Total Loan Outstanding (₹)" aria-label="Total Loan Outstanding" required>
+                    <input type="text" placeholder="EMI Due From (Months/Date)" aria-label="EMI Due From" required>
+                <textarea placeholder="Briefly describe your issue" aria-label="Briefly describe your issue" rows="3"></textarea>
                 <button type="submit" class="btn btn-primary full-width">Submit Request</button>
             </form>
         </div>
@@ -267,7 +270,7 @@
 
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/919076573857" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 32 32" class="whatsapp-icon" fill="white" width="32" height="32">
+        <svg aria-hidden="true" viewBox="0 0 32 32" class="whatsapp-icon" fill="white" width="32" height="32">
             <path
                 d="M16.75 3.5C9.55 3.5 3.75 9.3 3.75 16.5c0 2.6.75 5.05 2.1 7.2L4.5 29.5l6-1.6c2 .95 4.25 1.5 6.25 1.5 7.2 0 13-5.8 13-13s-5.8-13-13-13zm0 23.5c-1.95 0-3.85-.5-5.5-1.45l-.4-.2-4.1 1.1 1.1-3.95-.25-.4C6.55 20.45 6 18.55 6 16.5c0-5.95 4.8-10.75 10.75-10.75 5.95 0 10.75 4.8 10.75 10.75S22.7 27 16.75 27zM22.5 19.95c-.3-.15-1.75-.85-2-1-.25-.1-.45-.1-.65.15-.2.25-.75 1-.95 1.25-.15.15-.35.2-.65.05-1.75-.9-3-2.3-4-4.15-.15-.25 0-.4.15-.55l.45-.5c.15-.15.2-.25.3-.45.1-.2.05-.35-.05-.5-.05-.15-.65-1.55-.9-2.15-.25-.55-.5-.5-.65-.5h-.55c-.2 0-.5.1-.8.4-.3.3-1.15 1.1-1.15 2.7 0 1.6 1.15 3.15 1.3 3.35.15.2 2.25 3.45 5.45 4.85 2 .85 2.75.95 3.7.85 1.05-.1 2.35-.95 2.7-1.9.3-1 .3-1.8.2-1.95-.15-.2-.35-.3-.65-.45z"
                 fill="#FFF" />
